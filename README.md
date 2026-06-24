@@ -1,5 +1,16 @@
 # WarehouseBot — Simulasi Robot Pengantar Barang Otonom di Gudang (A\*)
 
+![Python](https://img.shields.io/badge/Python-3.8%E2%80%933.14-3776AB?logo=python&logoColor=white)
+![pygame-ce](https://img.shields.io/badge/pygame--ce-%E2%89%A52.5-2C9F45)
+![Algoritma](https://img.shields.io/badge/algoritma-A*%20pathfinding-orange)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+> Robot gudang otonom yang merencanakan urutan pengambilan barang dan mencari
+> jalur optimal antar titik dengan algoritma **A\***, lalu mengeksekusinya dalam
+> simulasi visual real-time. Proyek demonstrasi *searching & planning* untuk
+> robotika gudang.
+
 Projek Akhir Artificial Intelligence 2026 — kategori **AI untuk Searching & Planning / Robotics**.
 
 Sebuah robot gudang otonom bertugas mengambil beberapa barang dari rak lalu
