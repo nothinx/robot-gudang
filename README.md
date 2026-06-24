@@ -25,22 +25,64 @@ daftar order             + jalur tiap segmen (A*)          + animasi gerak robot
 | `astar.py`       | Algoritma A\* + heuristik Manhattan (inti AI).                 |
 | `warehouse.py`   | Peta gudang + perencana misi (greedy nearest-neighbor).       |
 | `main.py`        | Simulasi & visualisasi Pygame.                                |
-| `requirements.txt` | Dependensi (pygame).                                         |
+| `requirements.txt` | Dependensi (`pygame-ce`).                                    |
+| `test_simulation.py` | Uji otomatis logika A\* & perencana misi (headless).       |
+
+## Persyaratan
+
+- **Python 3.8 – 3.14** (cek dengan `python --version`).
+- Sistem operasi apa saja (Windows / macOS / Linux). Dependensi visual
+  (`pygame-ce`) terpasang otomatis dari wheel siap pakai, tidak perlu compiler.
 
 ## Cara Menjalankan
 
-1. Pastikan Python 3.8+ terpasang.
-2. Install dependensi:
+**1. Clone repository**
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/nothinx/robot-gudang.git
+cd robot-gudang
+```
 
-3. Jalankan simulasi:
+**2. Buat virtual environment & aktifkan**
 
-   ```bash
-   python main.py
-   ```
+Windows (PowerShell):
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+macOS / Linux:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**3. Install dependensi**
+
+```bash
+pip install -r requirements.txt
+```
+
+**4. Jalankan simulasi** (membuka jendela grafis)
+
+```bash
+python main.py
+```
+
+**5. (Opsional) Jalankan pengujian otomatis** — headless, tanpa jendela:
+
+```bash
+python test_simulation.py
+```
+Output yang diharapkan diakhiri dengan `ALL TESTS PASSED`.
+
+## Troubleshooting
+
+| Gejala | Solusi |
+|--------|--------|
+| `pip install` gagal build `pygame` | Repo ini memakai `pygame-ce` (bukan `pygame`) justru untuk menghindari ini. Pastikan `requirements.txt` belum diubah, lalu `pip install -U pip` dan ulangi. |
+| `python` tidak dikenali | Gunakan `python3` (macOS/Linux) atau install Python dari [python.org](https://www.python.org/downloads/) dan centang *Add to PATH* (Windows). |
+| Jendela tidak muncul / butuh tampilan grafis | `main.py` butuh layar (GUI). Di server tanpa display, jalankan `test_simulation.py` untuk memverifikasi logika AI. |
 
 ## Kontrol
 
