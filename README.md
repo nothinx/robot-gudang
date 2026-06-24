@@ -7,6 +7,8 @@ mengantarnya ke titik *packing*. Robot merencanakan urutan kunjungan dan mencari
 jalur paling optimal menggunakan algoritma **A\* (A-Star)**, lalu mengeksekusinya
 dalam simulasi visual (Pygame).
 
+![Tampilan simulasi WarehouseBot](screenshot_simulasi.png)
+
 ## Alur AI
 
 ```
